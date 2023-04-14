@@ -62,6 +62,8 @@ print(acc)
 
 print(model.metrics_names) #metrics of the model
 
+#1. Save the model and use the saved model to predict on new text data (ex, “A lot of good things are happening. We are respected again throughout the world, and that's a great thing.@realDonaldTrump”)
+
 model.save('sentimentAnalysis.h5') #Saving the model
 
 from keras.models import load_model #Importing the package for importing the saved model
@@ -86,6 +88,8 @@ elif sentiment > 0:
     print("Positive")
 else:
     print("Cannot be determined")
+
+#2. Apply GridSearchCV on the source code provided in the class
 
 
 from keras.wrappers.scikit_learn import KerasClassifier #importing Keras classifier
